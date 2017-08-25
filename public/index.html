@@ -16,7 +16,7 @@
 							<th>Name</th>
 							<th>Email</th>
 							<th>Number</th>
-							<th>Action </th>
+							<th>Action</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -30,14 +30,14 @@
 							<td>{{contact.name}}</td>
 							<td>{{contact.email}}</td>
 							<td>{{contact.number}}</td>
-							<td></td>
+							<td>
+								<button class="btn btn-danger" ng-click="remove(contact._id)">Remove</button>
+								<button class="btn btn-primary" ng-click="">Edit</button>
+							</td>
 						</tr>
 					</tbody>
 				</table>	
 		</div>
-
-		<!-- <input ng-model="test">
-		{{test}} -->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>    
 	<script src="controllers/controller.js"></script>
