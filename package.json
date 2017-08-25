@@ -1,0 +1,25 @@
+{
+  "name": "training-project-exadel",
+  "version": "1.0.0",
+  "description": "My training project at Exadel",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekseverinets/training-project.git"
+  },
+  "author": "Evgeniya Severinets",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ekseverinets/training-project/issues"
+  },
+  "homepage": "https://github.com/ekseverinets/training-project#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongojs": "^2.4.1"
+  }
+}
