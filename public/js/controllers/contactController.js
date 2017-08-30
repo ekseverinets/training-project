@@ -1,16 +1,4 @@
-var myApp = angular.module('myApp', ["ngRoute"]);
-
-myApp.config(function($routeProvider) {
-  $routeProvider.when("/login", {
-    templateUrl : "login.html"
-  });
-  $routeProvider.when("/contactlist", {
-    templateUrl : "contactlist.html"
-	});
-	$routeProvider.otherwise({
-		redirectTo: "/login"
-	});
-});
+var myApp = angular.module('myApp');
 
 myApp.controller('AppCtrl',['$scope', '$http', function($scope, $http) {
 	console.log("Hello World from Controller");
@@ -56,4 +44,3 @@ myApp.controller('AppCtrl',['$scope', '$http', function($scope, $http) {
 	};
 
 }]);
-
