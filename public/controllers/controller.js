@@ -1,4 +1,17 @@
-var myApp = angular.module('myApp',[]);
+var myApp = angular.module('myApp', ["ngRoute"]);
+
+myApp.config(function($routeProvider) {
+  $routeProvider.when("/login", {
+    templateUrl : "login.html"
+  });
+  $routeProvider.when("/contactlist", {
+    templateUrl : "contactlist.html"
+	});
+	$routeProvider.otherwise({
+		redirectTo: "/login"
+	});
+});
+
 myApp.controller('AppCtrl',['$scope', '$http', function($scope, $http) {
 	console.log("Hello World from Controller");
 
@@ -14,6 +27,7 @@ myApp.controller('AppCtrl',['$scope', '$http', function($scope, $http) {
 	
 	$scope.addContact = function() {
 		console.log($scope.contact);
+		$scope.contact._id= "";
 		$http.post('/contactlist', $scope.contact).then(function(response) {
 			console.log(response.data);
 			refresh();
@@ -39,10 +53,6 @@ myApp.controller('AppCtrl',['$scope', '$http', function($scope, $http) {
 		$http.put('/contactlist/' + $scope.contact._id, $scope.contact).then(function(response) {
 			refresh();
 		});
-	};
-
-	$scope.deselect = function() {
-		$scope.contact = "";
 	};
 
 }]);
