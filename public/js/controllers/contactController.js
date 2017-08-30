@@ -14,13 +14,36 @@ myApp.controller('AppCtrl',['$scope', '$http', function($scope, $http) {
 	refresh();
 	
 	$scope.addContact = function() {
-		console.log($scope.contact);
-		$scope.contact._id= "";
-		$http.post('/contactlist', $scope.contact).then(function(response) {
-			console.log(response.data);
-			refresh();
-		});
+		if($scope.contactsForm.$valid) {
+			console.log($scope.contact);
+			$scope.contact._id= "";
+			$http.post('/contactlist', $scope.contact).then(function(response) {
+				console.log(response.data);
+				refresh();
+			});
+		};
 	};
+			// function validateMail(mail) {  
+			//  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {  
+			// 		return (true);  
+			// 	}  
+			// 		return (false);  
+			// };
+
+			// function isNumeric(n) {
+			// 	return !isNaN(parseFloat(n)) && isFinite(n);
+			// }
+
+			// if (validateMail($scope.contact.email) && isNumeric($scope.contact.number)){
+			// 	console.log($scope.contact);
+			// 	$scope.contact._id= "";
+			// 	$http.post('/contactlist', $scope.contact).then(function(response) {
+			// 		console.log(response.data);
+			// 		refresh();
+			// 	});
+			// } else {
+			// 	alert('You have entered an invalid email/number!');
+			// }
 
 	$scope.remove = function(id) {
 		console.log(id);
@@ -37,10 +60,12 @@ myApp.controller('AppCtrl',['$scope', '$http', function($scope, $http) {
 	};
 
 	$scope.update = function() {
-		console.log($scope.contact._id);
-		$http.put('/contactlist/' + $scope.contact._id, $scope.contact).then(function(response) {
-			refresh();
-		});
+		if($scope.contactsForm.$valid) {
+			console.log($scope.contact._id);
+			$http.put('/contactlist/' + $scope.contact._id, $scope.contact).then(function(response) {
+				refresh();
+			});
+		};
 	};
 
 }]);
