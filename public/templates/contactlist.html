@@ -1,4 +1,4 @@
-Contact List <a href="#!/login">Login</a>
+<a href="#!/login">Logout</a>
 <div class="container" ng-controller="AppCtrl">
 	<h1 class="text-center">Contact List App</h1>
 	<form name="contactsForm">
@@ -14,9 +14,9 @@ Contact List <a href="#!/login">Login</a>
 			</thead>
 			<tbody>
 				<tr>
-					<td><input class="from-control" ng-model="contact.name" placeholder="Enter name"></td>
-					<td><input class="from-control" type="email" ng-model="contact.email" placeholder="Enter email"></td>
-					<td><input class="from-control" ng-model="contact.number" placeholder="Enter number"></td>
+					<td><input class="form-control" type="text" ng-model="contact.name" placeholder="Enter name"></td>
+					<td><input class="form-control" type="email" ng-model="contact.email" aria-describedby="emailHelp" placeholder="Enter email">
+					<td><input class="form-control" type="number" min="0" ng-model="contact.number" placeholder="Enter number"></td>
 					<td><button class="btn btn-primary" ng-click="addContact()">Add Contact</button></td>
 					<td><button class="btn btn-info" ng-click="update()" ng-disabled="updateStatus">Update</button></td>
 				</tr>
