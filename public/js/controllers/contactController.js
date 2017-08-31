@@ -2,6 +2,8 @@ var myApp = angular.module('myApp');
 
 myApp.controller('AppCtrl',['$scope', '$http', function($scope, $http) {
 	console.log("Hello World from Controller");
+	
+	$scope.updateStatus = true;
 
 	var refresh = function() {
 		$http.get('/contactlist').then(function(response) {
@@ -57,6 +59,7 @@ myApp.controller('AppCtrl',['$scope', '$http', function($scope, $http) {
 		$http.get('/contactlist/' + id).then(function(response) {
 			$scope.contact = response.data;
 		});
+		$scope.updateStatus = false;
 	};
 
 	$scope.update = function() {
@@ -64,6 +67,7 @@ myApp.controller('AppCtrl',['$scope', '$http', function($scope, $http) {
 			console.log($scope.contact._id);
 			$http.put('/contactlist/' + $scope.contact._id, $scope.contact).then(function(response) {
 				refresh();
+				$scope.updateStatus = true;
 			});
 		};
 	};
