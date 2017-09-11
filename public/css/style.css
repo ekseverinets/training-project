@@ -1,0 +1,138 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background: linear-gradient(-45deg, #ffffff, #ec93b5, #89e0ff, #000000);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 0;
+	width: 50%;
+}
+
+
+/* Custom page header */
+
+.header {
+	background: #293a46;
+	height: 6rem;
+	line-height: 6rem;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.header-inner {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 1rem;
+}
+
+.header .text-muted {
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	font-size: 2.2rem;
+	text-decoration: none;
+	font-weight: 500;
+	padding: 0 1rem 0.2rem;
+	color: #fff90a!important;
+}
+
+.header .nav-link {
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	font-size: 0.8em;
+	padding: 0 0.8rem;
+}
+
+.header .nav-link:hover {
+	color: #fff90a;
+}
+
+.marketing {
+	flex: 1 0 auto;
+	margin: 0;
+	padding: 3rem;
+	background: #fff;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Custom page footer */
+
+.footer {
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+	background: #293a46;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	font-size: 0.7em;
+	padding: 1rem;
+	justify-content: center;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.page-header {
+	text-transform: uppercase;
+	font-size: 1.2em;
+	color: #ccc;
+	margin-bottom: 2rem;
+}
+
+button {
+	background-color: #293a46;
+	color: #fff;
+	cursor: pointer;
+}
+
+button:hover {
+	color: #fff90a;
+}

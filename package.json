@@ -18,9 +18,18 @@
   },
   "homepage": "https://github.com/ekseverinets/training-project#readme",
   "dependencies": {
+    "bcryptjs": "*",
     "body-parser": "^1.17.2",
+    "connect-flash": "*",
+    "cookie-parser": "*",
     "express": "^4.15.4",
-    "mongojs": "^2.4.1",
-    "express-session": "*"
+    "express-handlebars": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
   }
 }
